@@ -54,5 +54,9 @@ let players: [[String: Any]] = [
     ["Name": "Herschel Krustofski", "Height": 45, "Experience": true, "Guardian Name": "Hyman and Rachel Krustofski"]
 ]
 
+// create variables to store players into the teams (Sharks, Dragons, Raptors)
 
+var teamSharks: [String] = []
+var teamDragons: [String] = []
+var teamRaptors: [String] = []
 

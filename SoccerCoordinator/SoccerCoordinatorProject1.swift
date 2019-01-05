@@ -33,26 +33,26 @@ import Foundation
  
  */
 
-// creatibg a dictionary for each player thats contain Name, Height, Experience Level, and Guardian Name.
-
-let player1: [String: String] = ["Name": "Joe Smith", "Height": "42", "Experience": "Yes", "Guardian Name": "Jim and Jan Smith"]
-let player2: [String: String] = ["Name": "Jill Tanner", "Height": "36", "Experience": "Yes", "Guardian Name": "Clara Tanner"]
-let player3: [String: String] = ["Name": "Bill Bon", "Height": "43", "Experience": "Yes", "Guardian Name": "Sara and Jenny Bon"]
-let player4: [String: String] = ["Name": "Eva Gordon", "Height": "45", "Experience": "No", "Guardian Name": "Wendy and Mike Gordon"]
-let player5: [String: String] = ["Name": "Matt Gill", "Height": "40", "Experience": "No", "Guardian Name": "Charles and Sylvia Gill"]
-let player6: [String: String] = ["Name": "Kimmy Stein", "Height": "41", "Experience": "No", "Guardian Name": "Bill and Hillary Stein"]
-let player7: [String: String] = ["Name": "Sammy Adams", "Height": "45", "Experience": "No", "Guardian Name": "Jeff Adams"]
-let player8: [String: String] = ["Name": "Karl Saygan", "Height": "42", "Experience": "Yes", "Guardian Name": "Heather Bledsoe"]
-let player9: [String: String] = ["Name": "Suzane Greenberg", "Height": "44", "Experience": "Yes", "Guardian Name": "Henrietta Dumas"]
-let player10: [String: String] = ["Name": "Sal Dali", "Height": "41", "Experience": "No", "Guardian Name": "Gala Dali"]
-let player11: [String: String] = ["Name": "Joe Kavalier", "Height": "39", "Experience": "No", "Guardian Name": "Sam and Elaine Kavalier"]
-let player12: [String: String] = ["Name": "Ben Finkelstein", "Height": "44", "Experience": "No", "Guardian Name": "Aaron and Jill Finkelstein"]
-let player13: [String: String] = ["Name": "Diego Soto", "Height": "41", "Experience": "Yes", "Guardian Name": "Robin and Sarika Soto"]
-let player14: [String: String] = ["Name": "Chloe Alaska", "Height": "47", "Experience": "No", "Guardian Name": "David and Jamie Alaska"]
-let player15: [String: String] = ["Name": "Arnold Willis", "Height": "43", "Experience": "No", "Guardian Name": "Claire Willis"]
-let player16: [String: String] = ["Name": "Phillip Helm", "Height": "44", "Experience": "Yes", "Guardian Name": "Thomas Helm and Eva Jones"]
-let player17: [String: String] = ["Name": "Diego Soto", "Height": "42", "Experience": "Yes", "Guardian Name": "Wynonna Brown"]
-let player18: [String: String] = ["Name": "Diego Soto", "Height": "45", "Experience": "Yes", "Guardian Name": "Hyman and Rachel Krustofski"]
+let players: [[String: Any]] = [
+    ["Name": "Joe Smith", "Height": 42, "Experience": true, "Guardian Name": "Jim and Jan Smith"],
+    ["Name": "Jill Tanner", "Height": 36, "Experience": true, "Guardian Name": "Clara Tanner"],
+    ["Name": "Bill Bon", "Height": 43, "Experience": true, "Guardian Name": "Sara and Jenny Bon"],
+    ["Name": "Eva Gordon", "Height": 45, "Experience": false, "Guardian Name": "Wendy and Mike Gordon"],
+    ["Name": "Matt Gill", "Height": 40, "Experience": false, "Guardian Name": "Charles and Sylvia Gill"],
+    ["Name": "Kimmy Stein", "Height": 41, "Experience": false, "Guardian Name": "Bill and Hillary Stein"],
+    ["Name": "Sammy Adams", "Height": 45, "Experience": false, "Guardian Name": "Jeff Adams"],
+    ["Name": "Karl Saygan", "Height": 42, "Experience": true, "Guardian Name": "Heather Bledsoe"],
+    ["Name": "Suzane Greenberg", "Height": 44, "Experience": true, "Guardian Name": "Henrietta Dumas"],
+    ["Name": "Sal Dali", "Height": 41, "Experience": false, "Guardian Name": "Gala Dali"],
+    ["Name": "Joe Kavalier", "Height": 39, "Experience": false, "Guardian Name": "Sam and Elaine Kavalier"],
+    ["Name": "Ben Finkelstein", "Height": 44, "Experience": false, "Guardian Name": "Aaron and Jill Finkelstein"],
+    ["Name": "Diego Soto", "Height": 41, "Experience": true, "Guardian Name": "Robin and Sarika Soto"],
+    ["Name": "Chloe Alaska", "Height": 47, "Experience": false, "Guardian Name": "David and Jamie Alaska"],
+    ["Name": "Arnold Willis", "Height": 43, "Experience": false, "Guardian Name": "Claire Willis"],
+    ["Name": "Phillip Helm", "Height": 44, "Experience": true, "Guardian Name": "Thomas Helm and Eva Jones"],
+    ["Name": "Les Clay", "Height": 42, "Experience": true, "Guardian Name": "Wynonna Brown"],
+    ["Name": "Herschel Krustofski", "Height": 45, "Experience": true, "Guardian Name": "Hyman and Rachel Krustofski"]
+]
 
 
 

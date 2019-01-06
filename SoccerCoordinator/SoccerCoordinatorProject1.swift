@@ -54,9 +54,27 @@ let players: [[String: Any]] = [
 /*18*/  ["Name": "Herschel Krustofski", "Height": 45, "Experience": true, "Guardian Name": "Hyman and Rachel Krustofski"]
 ]
 
-// create variables to store players into the teams (Sharks, Dragons, Raptors)
+// declare a variables to store players into the teams (Sharks, Dragons, Raptors)
 
 var teamSharks: [String] = []
 var teamDragons: [String] = []
 var teamRaptors: [String] = []
 
+var teams = [teamSharks,teamDragons,teamDragons]
+
+// declare a variables to store expierianced an inexperienced players
+
+var experiencedGroup: [[String: Any]] = []
+var inexperiencedGroup: [[String: Any]] = []
+
+// checking if each player is experienced or inexprienced
+
+for player in players {
+    
+    if (player["Experience"] as? Bool == true ){
+        experiencedGroup.append(player)
+    } else {
+        inexperiencedGroup.append(player)
+    }
+    
+}

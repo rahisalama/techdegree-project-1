@@ -86,3 +86,25 @@ let maxInexperiencedPlayersInTeam: Int = inexperiencedGroup.count / teams.count
 
 let avaragePlayersInTeam = players.count/teams.count
 
+// sorting the Teams
+
+for expPlayer in experiencedGroup {
+    if teamSharks.count < maxExperiencedPlayerInTeam{
+        teamSharks.append(expPlayer)
+    } else if teamDragons.count < maxExperiencedPlayerInTeam {
+        teamDragons.append(expPlayer)
+    } else  {
+        teamRaptors.append(expPlayer)
+    }
+}
+
+
+for inExpPlayer in inexperiencedGroup {
+    if teamSharks.count < inexperiencedGroup.count && teamSharks.count < avaragePlayersInTeam {
+        teamSharks.append(inExpPlayer)
+    } else if teamDragons.count < inexperiencedGroup.count && teamDragons.count < avaragePlayersInTeam {
+        teamDragons.append(inExpPlayer)
+    } else  {
+        teamRaptors.append(inExpPlayer)
+    }
+}

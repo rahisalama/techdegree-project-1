@@ -79,3 +79,10 @@ for player in players {
     
 }
 
+// decleare constants to to divide up the players and assign them fairly
+
+let maxExperiencedPlayerInTeam: Int = experiencedGroup.count / teams.count
+let maxInexperiencedPlayersInTeam: Int = inexperiencedGroup.count / teams.count
+
+let avaragePlayersInTeam = players.count/teams.count
+

@@ -108,3 +108,10 @@ for inExpPlayer in inexperiencedGroup {
         teamRaptors.append(inExpPlayer)
     }
 }
+
+// accessing teams
+
+teamDragons
+teamSharks
+teamRaptors
+

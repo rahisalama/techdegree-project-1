@@ -56,9 +56,9 @@ let players: [[String: Any]] = [
 
 // declare a variables to store players into the teams (Sharks, Dragons, Raptors)
 
-var teamSharks: [String] = []
-var teamDragons: [String] = []
-var teamRaptors: [String] = []
+var teamSharks: [[String: Any]] = []
+var teamDragons: [[String: Any]] = []
+var teamRaptors: [[String: Any]] = []
 
 var teams = [teamSharks,teamDragons,teamDragons]
 
@@ -78,3 +78,4 @@ for player in players {
     }
     
 }
+

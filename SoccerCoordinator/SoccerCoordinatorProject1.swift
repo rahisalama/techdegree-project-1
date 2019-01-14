@@ -115,3 +115,19 @@ teamDragons
 teamSharks
 teamRaptors
 
+// declare constants for teams details
+
+let teamSharksName = "Sharks"
+let practiceDateOfTeamSharks = "March 17, 3pm"
+
+let teamSharksDetails: [Any] = [teamSharks, teamSharksName, practiceDateOfTeamSharks]
+
+let teamDragonsName: String = "Dragons"
+let practiceDateOfTeamDragons: String = "March 17, 1pm"
+
+let teamDragonsDetails: [Any] = [teamDragons, teamDragonsName, practiceDateOfTeamDragons]
+
+let teamRaptorsName: String = "Raptors"
+let practiceDateOfTeamRaptors: String = "March 18, 1pm"
+
+let teamRaptorsDetails: [Any] = [teamRaptors, teamRaptorsName, practiceDateOfTeamRaptors]

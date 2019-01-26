@@ -130,7 +130,7 @@ var letters: [String] = []
 
 //create a letter: "dear "Guardian Name", We are plessed to inform you that your little hero "Name" has been hired to play with the "Team Name" team, please do not miss the first practice day on "date". hope to see you soon."
 
-func letter(forTeam team: [[String: Any]], withName teamName: String) -> Void {
+func createLetter(forTeam team: [[String: Any]], withName teamName: String) -> Void {
     
     // adding dates
     var date: String = ""
@@ -164,9 +164,9 @@ func printLetters() {
     }
 }
 
-letter(forTeam: teamSharks, withName: "Sharks")
-letter(forTeam: teamDragons, withName: "Dragons")
-letter(forTeam: teamRaptors, withName: "Raptors")
+createLetter(forTeam: teamSharks, withName: "Sharks")
+createLetter(forTeam: teamDragons, withName: "Dragons")
+createLetter(forTeam: teamRaptors, withName: "Raptors")
 
 print(letters)
 

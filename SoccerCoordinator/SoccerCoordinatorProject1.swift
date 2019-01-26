@@ -132,6 +132,7 @@ var letters: [String] = []
 
 func letter(forTeam team: [[String: Any]], withName teamName: String) -> Void {
     
+    // adding dates
     var date: String = ""
     
     switch teamName {
@@ -140,6 +141,8 @@ func letter(forTeam team: [[String: Any]], withName teamName: String) -> Void {
     case "Raptors": date = "March 18, 1pm"
     default: print("Invalid Team")
     }
+    
+    // generating a letter for each team by iterate through the players
     
     for player in team {
         guard let playerName = player["Name"], let guardianName = player["Guardian Name"] else {

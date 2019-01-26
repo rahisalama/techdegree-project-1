@@ -34,24 +34,24 @@ import Foundation
  */
 
 let players: [[String: Any]] = [
-/*1*/   ["Name": "Joe Smith", "Height": 42, "Experience": true, "Guardian Name": "Jim and Jan Smith"],
-/*2*/   ["Name": "Jill Tanner", "Height": 36, "Experience": true, "Guardian Name": "Clara Tanner"],
-/*3*/   ["Name": "Bill Bon", "Height": 43, "Experience": true, "Guardian Name": "Sara and Jenny Bon"],
-/*4*/   ["Name": "Eva Gordon", "Height": 45, "Experience": false, "Guardian Name": "Wendy and Mike Gordon"],
-/*5*/   ["Name": "Matt Gill", "Height": 40, "Experience": false, "Guardian Name": "Charles and Sylvia Gill"],
-/*6*/   ["Name": "Kimmy Stein", "Height": 41, "Experience": false, "Guardian Name": "Bill and Hillary Stein"],
-/*7*/   ["Name": "Sammy Adams", "Height": 45, "Experience": false, "Guardian Name": "Jeff Adams"],
-/*8*/   ["Name": "Karl Saygan", "Height": 42, "Experience": true, "Guardian Name": "Heather Bledsoe"],
-/*9*/   ["Name": "Suzane Greenberg", "Height": 44, "Experience": true, "Guardian Name": "Henrietta Dumas"],
-/*10*/  ["Name": "Sal Dali", "Height": 41, "Experience": false, "Guardian Name": "Gala Dali"],
-/*11*/  ["Name": "Joe Kavalier", "Height": 39, "Experience": false, "Guardian Name": "Sam and Elaine Kavalier"],
-/*12*/  ["Name": "Ben Finkelstein", "Height": 44, "Experience": false, "Guardian Name": "Aaron and Jill Finkelstein"],
-/*13*/  ["Name": "Diego Soto", "Height": 41, "Experience": true, "Guardian Name": "Robin and Sarika Soto"],
-/*14*/  ["Name": "Chloe Alaska", "Height": 47, "Experience": false, "Guardian Name": "David and Jamie Alaska"],
-/*15*/  ["Name": "Arnold Willis", "Height": 43, "Experience": false, "Guardian Name": "Claire Willis"],
-/*16*/  ["Name": "Phillip Helm", "Height": 44, "Experience": true, "Guardian Name": "Thomas Helm and Eva Jones"],
-/*17*/  ["Name": "Les Clay", "Height": 42, "Experience": true, "Guardian Name": "Wynonna Brown"],
-/*18*/  ["Name": "Herschel Krustofski", "Height": 45, "Experience": true, "Guardian Name": "Hyman and Rachel Krustofski"]
+/*1*/   ["name": "Joe Smith", "height": 42, "experience": true, "guardians": "Jim and Jan Smith"],
+/*2*/   ["name": "Jill Tanner", "height": 36, "experience": true, "guardians": "Clara Tanner"],
+/*3*/   ["name": "Bill Bon", "height": 43, "experience": true, "guardians": "Sara and Jenny Bon"],
+/*4*/   ["name": "Eva Gordon", "height": 45, "experience": false, "guardians": "Wendy and Mike Gordon"],
+/*5*/   ["name": "Matt Gill", "height": 40, "experience": false, "guardians": "Charles and Sylvia Gill"],
+/*6*/   ["name": "Kimmy Stein", "height": 41, "experience": false, "guardians": "Bill and Hillary Stein"],
+/*7*/   ["name": "Sammy Adams", "height": 45, "experience": false, "guardians": "Jeff Adams"],
+/*8*/   ["name": "Karl Saygan", "height": 42, "experience": true, "guardians": "Heather Bledsoe"],
+/*9*/   ["name": "Suzane Greenberg", "height": 44, "experience": true, "guardians": "Henrietta Dumas"],
+/*10*/  ["name": "Sal Dali", "height": 41, "experience": false, "guardians": "Gala Dali"],
+/*11*/  ["name": "Joe Kavalier", "height": 39, "experience": false, "guardians": "Sam and Elaine Kavalier"],
+/*12*/  ["name": "Ben Finkelstein", "height": 44, "experience": false, "guardians": "Aaron and Jill Finkelstein"],
+/*13*/  ["name": "Diego Soto", "height": 41, "experience": true, "guardians": "Robin and Sarika Soto"],
+/*14*/  ["name": "Chloe Alaska", "height": 47, "experience": false, "guardians": "David and Jamie Alaska"],
+/*15*/  ["name": "Arnold Willis", "height": 43, "experience": false, "guardians": "Claire Willis"],
+/*16*/  ["name": "Phillip Helm", "height": 44, "experience": true, "guardians": "Thomas Helm and Eva Jones"],
+/*17*/  ["name": "Les Clay", "height": 42, "experience": true, "guardians": "Wynonna Brown"],
+/*18*/  ["name": "Herschel Krustofski", "height": 45, "experience": true, "guardians": "Hyman and Rachel Krustofski"]
 ]
 
 // declare a variables to store players into the teams (Sharks, Dragons, Raptors)
@@ -73,7 +73,7 @@ var teams = [teamSharks,teamDragons,teamDragons]
 
 for player in players {
     
-    if (player["Experience"] as? Bool == true ){
+    if (player["experience"] as? Bool == true ){
         experiencedGroup.append(player)
     } else {
         inexperiencedGroup.append(player)
@@ -145,7 +145,7 @@ func letter(forTeam team: [[String: Any]], withName teamName: String) -> Void {
     // generating a letter for each team by iterate through the players
     
     for player in team {
-        guard let playerName = player["Name"], let guardianName = player["Guardian Name"] else {
+        guard let playerName = player["name"], let guardianName = player["guardians"] else {
             return
         }
         

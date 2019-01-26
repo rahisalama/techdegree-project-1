@@ -60,12 +60,14 @@ var teamSharks: [[String: Any]] = []
 var teamDragons: [[String: Any]] = []
 var teamRaptors: [[String: Any]] = []
 
-var teams = [teamSharks,teamDragons,teamDragons]
 
 // declare a variables to store expierianced an inexperienced players
 
 var experiencedGroup: [[String: Any]] = []
 var inexperiencedGroup: [[String: Any]] = []
+
+
+var teams = [teamSharks,teamDragons,teamDragons]
 
 // checking if each player is experienced or inexprienced
 
@@ -79,7 +81,7 @@ for player in players {
     
 }
 
-// decleare constants to to divide up the players and assign them fairly
+// decleare constants to divide up the players and assign them fairly
 
 let maxExperiencedPlayerInTeam: Int = experiencedGroup.count / teams.count
 let maxInexperiencedPlayersInTeam: Int = inexperiencedGroup.count / teams.count
@@ -109,25 +111,59 @@ for inExpPlayer in inexperiencedGroup {
     }
 }
 
-// accessing teams
+//Accessing Experineced and Inexperienced Group
+
+experiencedGroup
+inexperiencedGroup
+
+// Accessing teams
 
 teamDragons
 teamSharks
 teamRaptors
 
-// declare constants for teams details
 
-let teamSharksName = "Sharks"
-let practiceDateOfTeamSharks = "March 17, 3pm"
 
-let teamSharksDetails: [Any] = [teamSharks, teamSharksName, practiceDateOfTeamSharks]
 
-let teamDragonsName: String = "Dragons"
-let practiceDateOfTeamDragons: String = "March 17, 1pm"
+// create a variable to store the letters
+var letters: [String] = []
 
-let teamDragonsDetails: [Any] = [teamDragons, teamDragonsName, practiceDateOfTeamDragons]
+//create a letter: "dear "Guardian Name", We are plessed to inform you that your little hero "Name" has been hired to play with the "Team Name" team, please do not miss the first practice day on "date". hope to see you soon."
 
-let teamRaptorsName: String = "Raptors"
-let practiceDateOfTeamRaptors: String = "March 18, 1pm"
+func letter(forTeam team: [[String: Any]], withName teamName: String) -> Void {
+    
+    var date: String = ""
+    
+    switch teamName {
+    case "Sharks": date = "March 17, 3pm"
+    case "Dragons": date = "March 17, 1pm"
+    case "Raptors": date = "March 18, 1pm"
+    default: print("Invalid Team")
+    }
+    
+    for player in team {
+        guard let playerName = player["Name"], let guardianName = player["Guardian Name"] else {
+            return
+        }
+        
+        let letter = ("dear \(guardianName), We are plessed to inform you that your little hero \(playerName) has been hired to play with the \(teamName) team, please do not miss the first practice day on \(date). hope to see you soon.")
+        
+        letters.append(letter)
+    }
+    
+    
+    
+}
 
-let teamRaptorsDetails: [Any] = [teamRaptors, teamRaptorsName, practiceDateOfTeamRaptors]
+func printLetters() {
+    for letter in letters {
+        print(letter)
+    }
+}
+
+letter(forTeam: teamSharks, withName: "Sharks")
+letter(forTeam: teamDragons, withName: "Dragons")
+letter(forTeam: teamRaptors, withName: "Raptors")
+
+print(letters)
+

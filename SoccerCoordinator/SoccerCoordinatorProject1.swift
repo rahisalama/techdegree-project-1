@@ -63,8 +63,8 @@ var teamRaptors: [[String: Any]] = []
 
 // declare a variables to store expierianced an inexperienced players
 
-var experiencedGroup: [[String: Any]] = []
-var inexperiencedGroup: [[String: Any]] = []
+var experiencedPlayer: [[String: Any]] = []
+var inexperiencedPlayer: [[String: Any]] = []
 
 
 var teams = [teamSharks,teamDragons,teamDragons]
@@ -74,23 +74,23 @@ var teams = [teamSharks,teamDragons,teamDragons]
 for player in players {
     
     if player["isExperienced"] as? Bool == true {
-        experiencedGroup.append(player)
+        experiencedPlayer.append(player)
     } else {
-        inexperiencedGroup.append(player)
+        inexperiencedPlayer.append(player)
     }
     
 }
 
 // decleare constants to divide up the players and assign them fairly
 
-let maxExperiencedPlayerInTeam: Int = experiencedGroup.count / teams.count
-let maxInexperiencedPlayersInTeam: Int = inexperiencedGroup.count / teams.count
+let maxExperiencedPlayerInTeam: Int = experiencedPlayer.count / teams.count
+let maxInexperiencedPlayersInTeam: Int = inexperiencedPlayer.count / teams.count
 
 let avaragePlayersInTeam = players.count/teams.count
 
 // sorting the Teams
 
-for expPlayer in experiencedGroup {
+for expPlayer in experiencedPlayer {
     if teamSharks.count < maxExperiencedPlayerInTeam{
         teamSharks.append(expPlayer)
     } else if teamDragons.count < maxExperiencedPlayerInTeam {
@@ -101,10 +101,10 @@ for expPlayer in experiencedGroup {
 }
 
 
-for inExpPlayer in inexperiencedGroup {
-    if teamSharks.count < inexperiencedGroup.count && teamSharks.count < avaragePlayersInTeam {
+for inExpPlayer in inexperiencedPlayer {
+    if teamSharks.count < inexperiencedPlayer.count && teamSharks.count < avaragePlayersInTeam {
         teamSharks.append(inExpPlayer)
-    } else if teamDragons.count < inexperiencedGroup.count && teamDragons.count < avaragePlayersInTeam {
+    } else if teamDragons.count < inexperiencedPlayer.count && teamDragons.count < avaragePlayersInTeam {
         teamDragons.append(inExpPlayer)
     } else  {
         teamRaptors.append(inExpPlayer)
@@ -113,8 +113,8 @@ for inExpPlayer in inexperiencedGroup {
 
 //Accessing Experineced and Inexperienced Group
 
-experiencedGroup
-inexperiencedGroup
+experiencedPlayer
+inexperiencedPlayer
 
 // Accessing teams
 
